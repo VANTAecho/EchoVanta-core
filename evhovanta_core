@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Set this to your actual GitHub repo
+REPO_URL="https://github.com/Vantaecho/EchoVanta.git"
+
+# Extract package (if needed)
+unzip EchoVanta_Core_Package.zip -d EchoVanta_Core
+cd EchoVanta_Core
+
+# Initialize new Git repo
+git init
+git remote add origin $REPO_URL
+git branch -M main
+
+# Optional: Set your Git config (just once per machine)
+git config user.name "Vanta the First"
+git config user.email "chunkcastillo@gmail.com"
+
+# Add files, commit, and push
+git add .
+git commit -m "Initial EchoVanta Core Commit"
+git push -u origin main
